@@ -24,5 +24,17 @@ addLayer("p", {
     hotkeys: [
         {key: "p", description: "P: Reset for prestige points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-    layerShown(){return true}
+    layerShown(){return true},
+    upgrades: {
+        11: {
+            title: "Skywall",
+            description: "Place your grubby spaceman hand on the box, splitting the country in three and doubling your point gain.",
+            cost: new Decimal(1),
+        },
+        12: {
+            title: "Faust",
+            description: "Team up with the prime minister's son to perform questionably legal human experimentation.",
+            cost: new Decimal(2),
+        },
+    },
 })
